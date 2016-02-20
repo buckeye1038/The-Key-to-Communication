@@ -13,9 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Parse.enableLocalDatastore(this);
 
-        Parse.initialize(this);
 
         ParseObject testObject = new ParseObject("TestObject");
         testObject.put("foo", "bar");
