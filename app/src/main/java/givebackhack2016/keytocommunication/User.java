@@ -67,7 +67,7 @@ public class User extends ParseUser {
     }
     //Setting the last name of the User
     public void setLastName(String lName){
-        user.put("firstName", lName);
+        user.put("lastName", lName);
     }
 
     //Date of Birth of the User
