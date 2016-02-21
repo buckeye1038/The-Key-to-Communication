@@ -1,6 +1,7 @@
 package givebackhack2016.keytocommunication;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.parse.ParseUser;
@@ -86,17 +87,25 @@ public class User extends ParseUser {
     public void saveUser(Context context) {
         final Context c = context;
         user.signUpInBackground(new SignUpCallback() {
+
+            @Override
             public void done(ParseException e) {
-                if (e == null) {
-                    // Show a simple Toast message upon successful registration
+
+                if (e != null) {
+
                     Toast.makeText(c,
-                            "Successfully Signed up, please log in.",
-                            Toast.LENGTH_LONG).show();
+                            "Saving user failed.", Toast.LENGTH_SHORT).show();
+                    Log.w("Saving User",
+                            "Error : " + e.getMessage() + ":::" + e.getCode());
                 } else {
-                    Toast.makeText(c,
-                            "Sign up Error", Toast.LENGTH_LONG)
-                            .show();
+
+                    Toast.makeText(c, "User Saved",
+                            Toast.LENGTH_SHORT).show();
+
+                    /*Do some things here if you want to.*/
+
                 }
+
             }
         });
     }
