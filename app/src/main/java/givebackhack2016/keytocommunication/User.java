@@ -15,7 +15,6 @@ public class User {
     public User(){
         user = new ParseUser();
     }
-
     //Constructors
 
 
