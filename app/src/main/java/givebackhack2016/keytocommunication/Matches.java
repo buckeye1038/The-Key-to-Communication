@@ -12,15 +12,27 @@ import java.util.Random;
 
 
 public class Matches{
-    private ArrayList<User> matchList;
+    public ArrayList<User> matchList;
 
     public void add(User x){
     this.matchList.add(x);
     }
 
+    /**
+     *
+     * @param x The User to be removed
+     * @requires matchList.contains(x)
+     */
+    public User remove(User x) {
+        return this.matchList.remove(matchList.indexOf(x));
+    }
 
-    public void remove(User x){
-        this.matchList.remove(matchList.indexOf(x));
+    public User pop(){
+        User user = null;
+        if(!this.matchList.isEmpty()){
+            user = this.matchList.remove(0);
+        }
+        return user;
     }
 
     public void populateMatchList(){

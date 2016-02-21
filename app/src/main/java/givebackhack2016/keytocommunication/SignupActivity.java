@@ -44,7 +44,6 @@ public class SignupActivity extends AppCompatActivity {
         dob = (EditText) findViewById(R.id.dateOfBirth);
         password = (EditText) findViewById(R.id.password);
         tagLine = (EditText) findViewById(R.id.tagLine);
-
         // Locate Buttons in main.xml
         submit = (Button) findViewById(R.id.submit);
 

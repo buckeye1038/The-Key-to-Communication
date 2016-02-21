@@ -18,6 +18,7 @@ public class User {
     //Constructors
 
 
+
     public User(ParseUser parseUser) {
         user = parseUser;
     }
@@ -47,6 +48,8 @@ public class User {
         return user.getInt("DOB");
     }
 
+    public String getUsername() { return user.getUsername(); }
+
     public String getLanguageWantToLearn(){ return user.getString("wantToLearn");}
 
     public String getLanguageKnows(){ return user.getString("knows");}
@@ -66,7 +69,7 @@ public class User {
     }
     //Setting the last name of the User
     public void setLastName(String lName){
-        user.put("firstName", lName);
+        user.put("lastName", lName);
     }
 
     //Date of Birth of the User

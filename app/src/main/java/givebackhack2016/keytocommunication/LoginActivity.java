@@ -54,14 +54,22 @@ public class LoginActivity extends AppCompatActivity {
                             public void done(ParseUser user, ParseException e) {
                                 if (user != null) {
                                     // If user exist and authenticated, send user to Welcome.class
-                                    Intent intent = new Intent(
-                                            LoginActivity.this,
-                                            MainActivity.class);
-                                    startActivity(intent);
-                                    Toast.makeText(getApplicationContext(),
-                                            "Successfully Logged in",
-                                            Toast.LENGTH_LONG).show();
-                                    finish();
+                                    User currentUser = new User(user);
+                                    if(currentUser.getLanguageKnows() != null) {
+                                        Intent intent = new Intent(
+                                                LoginActivity.this,
+                                                MainActivity.class);
+                                        startActivity(intent);
+                                        Toast.makeText(getApplicationContext(),
+                                                "Successfully Logged in",
+                                                Toast.LENGTH_LONG).show();
+                                        finish();
+                                    } else {
+                                        Intent intent = new Intent(
+                                                LoginActivity.this,
+                                                SelectActivity.class);
+                                        startActivity(intent);
+                                    }
                                 } else {
                                     Toast.makeText(
                                             getApplicationContext(),
