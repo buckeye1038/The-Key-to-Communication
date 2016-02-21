@@ -1,6 +1,7 @@
 package givebackhack2016.keytocommunication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,12 +36,17 @@ public class UserListAdapter extends ArrayAdapter<User> {
 
         username.setText(user.getUsername());
         tagline.setText(user.getTagLine());
+        String wantLang = user.getLanguageWantToLearn();
+        String knownLang = user.getLanguageKnows();
+        language.setText(wantLang);
         //set the language
 
         rowView.setOnClickListener(new View.OnClickListener(){
            @Override
             public void onClick(View v){
                //Open Messages with new Chat
+               Intent i  = new Intent(context, MessagesActivity.class);
+               i.putExtra("id", user.getParseUser().getObjectId());
                //Open Messages with new Chat
            }
         });

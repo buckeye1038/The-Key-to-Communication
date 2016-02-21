@@ -81,8 +81,8 @@ public class User {
         user.put("tagLine", tagLine);
     }
 
-    public void setLanguageWantToLearn(Language language){ user.put("wantToLearn",language);}
-    public void setLanguageKnows(Language language){user.put("knows", language);}
+    public void setLanguageWantToLearn(Language language){ user.put("wantToLearn",language.getLanguage());}
+    public void setLanguageKnows(Language language){user.put("knows", language.getLanguage());}
 
     //
     public void saveUser(Context context) {
