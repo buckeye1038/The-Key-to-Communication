@@ -7,24 +7,23 @@ import android.widget.Toast;
 import com.parse.ParseUser;
 import com.parse.ParseException;
 import com.parse.SignUpCallback;
-import java.util.Date;
 
-/**
- * Created by Wright on 2/20/16.
- */
-public class User extends ParseUser {
 
+public class User {
     private ParseUser user;
-    //Constructors
-    public User() {
+
+    public User(){
         user = new ParseUser();
     }
+
+    //Constructors
+
 
     public User(ParseUser parseUser) {
         user = parseUser;
     }
-    //Get methods
 
+    //Get methods
     public String getUserID(){
         return user.getString("ID");
     }
