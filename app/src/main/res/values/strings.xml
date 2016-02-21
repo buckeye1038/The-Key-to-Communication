@@ -18,6 +18,8 @@
     <string name="new_lastname_text_default">Last Name:</string>
     <string name="new_dateOfBirth_text_default">Year of Birth:</string>
     <string name="new_tagLine_text_default">About Yourself:</string>
+    <string name="new_known_text_default">Known Language:</string>
+    <string name="new_want_text_default">Language to Learn:</string>
     <string name="submit">Submit</string>
 
 

@@ -4,16 +4,15 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="givebackhack2016.keytocommunication" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".App">
+        android:theme="@style/AppTheme">
         <meta-data
             android:name="com.parse.APPLICATION_ID"
             android:value="kouQKM97bx7TXwDwd7DVyVIH246em5LUQklGvyMb" />
@@ -21,14 +20,11 @@
             android:name="com.parse.CLIENT_KEY"
             android:value="Q4f68F98Zo3Bixln5hbn5scYa0tuM4buRZ0g7Y8I" />
         //Main Activity
-        <activity android:name=".MainActivity"></activity>
-
+        <activity android:name=".MainActivity" />
         //Login Activity
         <activity android:name=".LoginActivity" />
-
         //Sign Up Activity
         <activity android:name=".SignupActivity" />
-
         //Start Activity
         <activity android:name=".StartActivity">
             <intent-filter>
@@ -37,6 +33,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".SelectActivity"></activity>
     </application>
 
 </manifest>

@@ -16,9 +16,6 @@ public class User {
         user = new ParseUser();
     }
 
-    //Constructors
-
-
     public User(ParseUser parseUser) {
         user = parseUser;
     }
@@ -47,6 +44,8 @@ public class User {
     public int getDOB(){
         return user.getInt("DOB");
     }
+
+    public String getUsername() { return user.getUsername(); }
 
     public String getLanguageWantToLearn(){ return user.getString("wantToLearn");}
 
