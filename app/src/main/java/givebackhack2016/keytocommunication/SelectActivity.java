@@ -1,5 +1,6 @@
 package givebackhack2016.keytocommunication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -68,6 +69,9 @@ public class SelectActivity extends AppCompatActivity {
 
                     //Save User?
                     user.saveUser(getApplicationContext());
+
+                    Intent i = new Intent(SelectActivity.this, MainActivity.class);
+                    startActivity(i);
 
                     finish();
                 }
