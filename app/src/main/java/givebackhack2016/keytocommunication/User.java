@@ -37,7 +37,7 @@ public class User {
     }
 
     public String getLastName(){
-        return user.getString("firstName");
+        return user.getString("lastName");
     }
 
     public String getTagLine(){
