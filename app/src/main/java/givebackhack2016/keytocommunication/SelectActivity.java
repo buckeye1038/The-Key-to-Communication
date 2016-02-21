@@ -22,6 +22,11 @@ public class SelectActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
+
+
         setContentView(R.layout.activity_select);
 
 
@@ -68,7 +73,7 @@ public class SelectActivity extends AppCompatActivity {
                     user.setLanguageWantToLearn(wantedLanguage);
 
                     //Save User?
-                    user.saveUser(getApplicationContext());
+                    user.updateUser();
 
                     Intent i = new Intent(SelectActivity.this, MainActivity.class);
                     startActivity(i);
