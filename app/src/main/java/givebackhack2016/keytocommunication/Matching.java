@@ -21,7 +21,7 @@ public class Matching {
         int compUserAge = compUser.getDOB();
         boolean ages = ((curUserAge<18 && compUserAge<18)||(curUserAge>=18 && compUserAge>=18));
 
-        return (languages&&ages);
+        return (languages && ages);
     }
 
 }

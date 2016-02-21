@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * Created by danielkrajnak on 2/20/16.
  */
-@ParseClassName("Language")
+@ParseClassName("Messages")
 public class Messages extends ParseObject{
     public Messages(){
         //Default Constructor

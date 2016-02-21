@@ -1,4 +1,24 @@
 <resources>
     <string name="app_name">Key to Communication</string>
     <string name="title_activity_app">App</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    //Login Activity
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="LoginBtn">Login</string>
+    <string name="txtOr">Or</string>
+    <string name="SignupBtn">Sign Up</string>
+
+    //Sign Up Activity
+    <string name="new_username_text_default">Username:</string>
+    <string name="new_password_text_default">Password:</string>
+    <string name="new_password_text_confirm">Confirm Password:</string>
+    <string name="new_firstname_text_default">First Name:</string>
+    <string name="new_lastname_text_default">Last Name:</string>
+    <string name="new_dateOfBirth_text_default">Year of Birth:</string>
+    <string name="new_tagLine_text_default">About Yourself:</string>
+    <string name="submit">Submit</string>
+
+
 </resources>
