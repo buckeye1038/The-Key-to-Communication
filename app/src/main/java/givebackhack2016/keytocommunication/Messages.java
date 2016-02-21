@@ -4,13 +4,12 @@ import com.parse.ParseClassName;
 import com.parse.ParseObject;
 
 import java.sql.Time;
+import java.util.Calendar;
 import java.util.Date;
 
-/**
- * Created by danielkrajnak on 2/20/16.
- */
+
 @ParseClassName("Messages")
-public class Messages extends ParseObject{
+public class Messages extends ParseObject {
     public Messages(){
         //Default Constructor
     }
@@ -23,7 +22,7 @@ public class Messages extends ParseObject{
     public Date getTimeSent(){
         return getDate("timeSent");
     }
-    public void setTimeSent(Date date){
+    public void setTimeSent(Calendar date){
         put("timeSent", date);
     }
 
@@ -58,10 +57,4 @@ public class Messages extends ParseObject{
     public void setMessage(String message){
         put("message", message);
     }
-
-
-
-
-
-
 }

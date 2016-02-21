@@ -15,6 +15,9 @@ public class User {
     public User(){
         user = new ParseUser();
     }
+    //Constructors
+
+
 
     public User(ParseUser parseUser) {
         user = parseUser;
