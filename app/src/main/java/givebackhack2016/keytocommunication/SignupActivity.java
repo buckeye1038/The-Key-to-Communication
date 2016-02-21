@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.parse.ParseUser;
+
 import java.util.Date;
 
 public class SignupActivity extends AppCompatActivity {
@@ -66,6 +68,10 @@ public class SignupActivity extends AppCompatActivity {
                 } else {
 
                     // Save new user data into Parse.com Data Storage
+//                    ParseUser parseUser = new ParseUser();
+//                    parseUser.setUsername(userNameTxt);
+//                    parseUser.setPassword(passwordTxt);
+
                     User user = new User();
                     user.setUsername(userNameTxt);
                     user.setPassword(passwordTxt);
