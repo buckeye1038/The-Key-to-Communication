@@ -8,14 +8,15 @@ import com.parse.ParseObject;
  */
 @ParseClassName("Language")
 public class Language extends ParseObject{
+    String nameOfLanguage;
     public Language(){
         // Default constructor
     }
 
-    public Language(String lang){
+
+    public String getLanguage() { return getString("langName");}
+    public void setLanguage(Language language){ put("langName", language);
 
     }
 
-    public String getLangName() { return getString("langName");
-    }
 }

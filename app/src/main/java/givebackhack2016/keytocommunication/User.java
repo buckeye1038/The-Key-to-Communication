@@ -44,10 +44,13 @@ public class User extends ParseUser {
         return user.getString("tagLine");
     }
 
-    public Date getDOB(){
-        return user.getDate("DOB");
+    public int getDOB(){
+        return user.getInt("DOB");
     }
 
+    public String getLanguageWantToLearn(){ return user.getString("wantToLearn");}
+
+    public String getLanguageKnows(){ return user.getString("knows");}
     //set methods
 
     //Setting the Username
@@ -68,14 +71,18 @@ public class User extends ParseUser {
     }
 
     //Date of Birth of the User
-    public void setDOB(Date date){
-        user.put("DOB", date);
+    public void setDOB(int year){
+        user.put("DOB", year);
     }
     //Tag Line? Interests.
     public void setTagLine(String tagLine){
         user.put("tagLine", tagLine);
     }
 
+    public void setLanguageWantToLearn(Language language){ user.put("wantToLearn",language);}
+    public void setLanguageKnows(Language language){user.put("knows", language);}
+
+    //
     public void saveUser(Context context) {
         final Context c = context;
         user.signUpInBackground(new SignUpCallback() {
