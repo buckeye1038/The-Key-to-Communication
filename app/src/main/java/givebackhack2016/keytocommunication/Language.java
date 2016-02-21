@@ -14,10 +14,7 @@ public class Language extends ParseObject{
         put("langName", lang);
     }
 
-
-    public String getLanguage() { return getString("langName");}
-    public void setLanguage(Language language){ put("langName", language);
-
+    public String getLanguage() {
+        return getString("langName");
     }
-
 }
